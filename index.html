@@ -12,7 +12,10 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/icon-512.png" type="image/png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
 <header class="nav">
@@ -41,10 +44,17 @@
     <div class="pills">
       <span class="pill g">No ads</span><span class="pill b">No accounts</span><span class="pill y">Plays offline</span>
     </div>
-    <div class="art"><img src="assets/header.jpg" alt="PrismaRay boards with a red beam mid-solve and a green solved beam" width="2400" height="1350"></div>
+    <div class="stats">
+      <div class="stat"><b>16</b><span>optical elements</span></div>
+      <div class="stat"><b>100+</b><span>solver-checked levels</span></div>
+      <div class="stat"><b>10</b><span>ranks to climb</span></div>
+      <div class="stat"><b>0</b><span>ads or accounts</span></div>
+    </div>
+    <div class="art"><img src="assets/header.jpg" alt="PrismaRay boards with a red beam mid-solve and a green solved beam" ></div>
   </section>
 
   <section class="wrap" id="features">
+    <p class="eyebrow">The optics</p>
     <h2>Real optics, honest physics</h2>
     <p class="lead">Sixteen optical elements, each with its own rules of colour, intensity and polarization. Mixing them is where the puzzles live.</p>
     <div class="grid">
@@ -58,21 +68,23 @@
   </section>
 
   <section class="wrap" id="screens">
+    <p class="eyebrow">In the app</p>
     <h2>A board that reads at a glance</h2>
     <p class="lead">Rock-mass walls, a beam with real bloom and light-travel reveal, four board skins, four beam tints.</p>
-    <div class="screens">
-      <img src="assets/01-bend-light.jpg" alt="Level 44 with a red beam bouncing between mirrors" loading="lazy" width="720" height="1565">
-      <img src="assets/02-optics.jpg" alt="Level 100 solved, showing polarizers, a wave plate and an isolator" loading="lazy" width="720" height="1565">
-      <img src="assets/03-levels.jpg" alt="Chapter level select with stars" loading="lazy" width="720" height="1565">
-      <img src="assets/04-daily.jpg" alt="Daily challenge ladder with a twelve-day streak" loading="lazy" width="720" height="1565">
-      <img src="assets/05-ranks.jpg" alt="A solved board in the neon skin" loading="lazy" width="720" height="1565">
-      <img src="assets/06-codex.jpg" alt="The lab notebook codex" loading="lazy" width="720" height="1565">
+    <div class="shots">
+      <figure class="shot"><img src="assets/01-bend-light.jpg" alt="Level 44 with a red beam bouncing between mirrors" loading="lazy"></figure>
+      <figure class="shot"><img src="assets/02-optics.jpg" alt="Level 100 solved, showing polarizers, a wave plate and an isolator" loading="lazy"></figure>
+      <figure class="shot"><img src="assets/03-levels.jpg" alt="Chapter level select with stars" loading="lazy"></figure>
+      <figure class="shot"><img src="assets/04-daily.jpg" alt="Daily challenge ladder with a twelve-day streak" loading="lazy"></figure>
+      <figure class="shot"><img src="assets/05-ranks.jpg" alt="A solved board in the neon skin" loading="lazy"></figure>
+      <figure class="shot"><img src="assets/06-codex.jpg" alt="The lab notebook codex" loading="lazy"></figure>
     </div>
   </section>
 
   <section class="wrap" id="how">
-    <h2>How it plays</h2>
-    <p class="lead">Thirty seconds to learn. Chapters to master.</p>
+    <p class="eyebrow">How it plays</p>
+    <h2>Thirty seconds to learn</h2>
+    <p class="lead">Chapters to master.</p>
     <div class="steps">
       <div class="step"><h3>Drag an optic onto a slot</h3><p>The tray holds exactly the pieces the level needs. Typed slots only take their own kind.</p></div>
       <div class="step"><h3>Tap to aim</h3><p>Mirrors flip, splitters and polarizers rotate. The beam redraws live with every move.</p></div>
@@ -81,6 +93,7 @@
   </section>
 
   <section class="wrap" id="everyone">
+    <p class="eyebrow">Accessibility</p>
     <h2>Made to be played by everyone</h2>
     <p class="lead">Colour-blind palettes with letter cues on beams and targets, VoiceOver labels, Reduce Motion, adjustable haptics and full Dynamic Type. Zen mode has no timer. Arcade keeps the countdown.</p>
     <div class="cta" style="display:flex;gap:12px;flex-wrap:wrap">
