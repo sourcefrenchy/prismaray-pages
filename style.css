@@ -129,3 +129,16 @@ footer .spacer { flex: 1; }
   .hero { padding-top: 52px; } section.wrap { padding: 52px 20px; }
   .stats { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* Doc page hero + art */
+.doc-hero { display: grid; grid-template-columns: 1.1fr .9fr; gap: 32px; align-items: center; margin-bottom: 36px; }
+.doc-hero h1 { margin-bottom: 8px; }
+.doc-hero .sub { margin-bottom: 16px; }
+.doc-hero .callout { margin-top: 8px; }
+.doc-art { border-radius: var(--radius); border: 1px solid var(--border); background: var(--bg-2); overflow: hidden;
+  box-shadow: 0 30px 70px rgba(0,0,0,.55); }
+.doc-art svg { display: block; width: 100%; height: auto; }
+.doc .shots.two { grid-template-columns: repeat(2, 1fr); margin: 20px 0 8px; }
+.zeros { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 24px 0 8px; }
+.zeros .stat b { font-size: 34px; }
+@media (max-width: 760px) { .doc-hero { grid-template-columns: 1fr; } .zeros { grid-template-columns: repeat(3, 1fr); gap: 8px; } .zeros .stat b { font-size: 26px; } }

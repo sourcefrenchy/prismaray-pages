@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=6">
+<link rel="stylesheet" href="style.css?v=7">
 </head>
 <body>
 <header class="nav">
@@ -26,11 +26,47 @@
 </header>
 
 <main class="wrap doc">
-  <h1>Privacy Policy</h1>
-  <div class="sub">Last updated October 26, 2026</div>
-
-  <div class="callout">
-    <p><strong>PrismaRay collects no personal data. Nothing. No accounts, no analytics, no ads, no tracking.</strong></p>
+  <div class="doc-hero">
+    <div>
+      <h1>Privacy Policy</h1>
+      <div class="sub">Last updated October 26, 2026</div>
+      <div class="callout">
+        <p><strong>PrismaRay collects no personal data. Nothing. No accounts, no analytics, no ads, no tracking.</strong></p>
+      </div>
+    </div>
+    <div class="doc-art" aria-hidden="true">
+<svg viewBox="0 0 640 420" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="g2" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="16"/></filter>
+    <filter id="g" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="rgba(255,255,255,.06)"/></pattern>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b0e1d"/><stop offset="1" stop-color="#05070f"/></linearGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#66ccff" stop-opacity=".35"/><stop offset="1" stop-color="#66ccff" stop-opacity=".05"/></linearGradient>
+  </defs>
+  <rect width="640" height="420" fill="url(#bg)"/><rect width="640" height="420" fill="url(#grid)"/>
+  <circle cx="320" cy="210" r="120" fill="#66ccff" opacity=".14" filter="url(#g2)"/>
+  <!-- shield -->
+  <path d="M320 60 L440 100 V210 C440 290 380 340 320 365 C260 340 200 290 200 210 V100 Z" fill="url(#shield)" stroke="#66ccff" stroke-width="3" stroke-opacity=".9"/>
+  <!-- prism inside -->
+  <g filter="url(#g)">
+    <path d="M110 215 H285" stroke="#ff5c40" stroke-width="4" stroke-linecap="round"/>
+    <path d="M320 150 L365 250 H275 Z" fill="none" stroke="#dbe6ff" stroke-width="4" stroke-linejoin="round"/>
+    <g stroke-width="3" stroke-linecap="round">
+      <path d="M352 220 L470 175" stroke="#ff5533"/><path d="M352 222 L470 195" stroke="#ffcc44"/><path d="M352 224 L470 215" stroke="#33ff77"/><path d="M352 226 L470 235" stroke="#3388ff"/><path d="M352 228 L470 255" stroke="#aa66ff"/>
+    </g>
+  </g>
+  <!-- the light stops at the shield edge: little "no exit" ticks -->
+  <g stroke="#66ccff" stroke-width="3" stroke-linecap="round" opacity=".8"><path d="M452 165 l12 -12"/><path d="M464 165 l-12 -12"/><path d="M452 265 l12 12"/><path d="M464 265 l-12 12"/></g>
+  <g font-family="JetBrains Mono, ui-monospace, Menlo, monospace" font-size="11" letter-spacing="2" fill="#9aa3c4" text-anchor="middle">
+    <text x="320" y="400">EVERYTHING STAYS ON YOUR DEVICE</text>
+  </g>
+</svg>
+</div>
+  </div>
+  <div class="zeros">
+    <div class="stat"><b>0</b><span>trackers</span></div>
+    <div class="stat"><b>0</b><span>accounts</span></div>
+    <div class="stat"><b>0</b><span>servers</span></div>
   </div>
 
   <h2>What we collect</h2>
