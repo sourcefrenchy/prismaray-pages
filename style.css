@@ -58,7 +58,7 @@ a:hover { text-decoration: underline; }
 
 .art { margin: 40px auto 0; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border);
   box-shadow: 0 30px 80px rgba(0,0,0,.6), 0 0 120px rgba(102,204,255,.08); }
-.art img { display: block; width: 100%; height: auto; }
+.art img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; }
 
 /* Sections */
 section { padding: 64px 0; }
@@ -73,7 +73,7 @@ h2 { font-size: clamp(26px, 4vw, 38px); letter-spacing: -.5px; margin: 0 0 10px;
 
 /* Screens */
 .screens { display: flex; gap: 18px; overflow-x: auto; padding: 8px 4px 20px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
-.screens img { flex: 0 0 auto; width: 260px; border-radius: 26px; border: 1px solid var(--border); scroll-snap-align: start;
+.screens img { flex: 0 0 auto; width: 260px; height: auto; aspect-ratio: 1206 / 2622; object-fit: cover; border-radius: 26px; border: 1px solid var(--border); scroll-snap-align: start;
   box-shadow: 0 20px 50px rgba(0,0,0,.5); }
 
 /* Steps */
