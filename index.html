@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=8">
+<link rel="stylesheet" href="style.css?v=9">
 </head>
 <body>
 <header class="nav">
@@ -25,7 +25,7 @@
       <a href="index.html" class="active hide-sm">Home</a>
       <a href="support.html">Support</a>
       <a href="privacy-policy.html" class="hide-sm">Privacy</a>
-      <a class="btn" href="https://apps.apple.com/us/app/prismaray/id6781785309" rel="noopener">
+      <a class="btn store" href="https://apps.apple.com/us/app/prismaray/id6781785309" rel="noopener">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.6c0-2.5 2.05-3.7 2.14-3.76-1.17-1.7-2.98-1.94-3.62-1.97-1.54-.16-3 .9-3.78.9-.78 0-1.98-.88-3.26-.86-1.68.03-3.22.98-4.08 2.48-1.74 3.02-.45 7.48 1.25 9.93.83 1.2 1.82 2.54 3.12 2.5 1.25-.05 1.73-.81 3.24-.81 1.52 0 1.94.81 3.27.78 1.35-.02 2.2-1.22 3.02-2.42.95-1.39 1.34-2.74 1.36-2.81-.03-.01-2.62-1-2.66-3.96zM13.9 5.25c.69-.83 1.15-1.99 1.02-3.15-.99.04-2.19.66-2.9 1.49-.64.74-1.2 1.92-1.05 3.05 1.1.09 2.24-.56 2.93-1.39z"/></svg>
         App Store
       </a>
@@ -38,7 +38,7 @@
     <h1>Real optics.<br><span>Real puzzles.</span></h1>
     <p>A laser-optics puzzle for iPhone and iPad. Place mirrors, prisms and splitters, watch the beam trace live, and feel the click when the whole board lights up.</p>
     <div class="cta">
-      <a class="btn" href="https://apps.apple.com/us/app/prismaray/id6781785309" rel="noopener">Download free on the App Store</a>
+      <a class="btn store" href="https://apps.apple.com/us/app/prismaray/id6781785309" rel="noopener">Download free on the App Store</a>
       <a class="btn ghost" href="#how">How it plays</a>
     </div>
     <div class="pills">
@@ -97,7 +97,7 @@
     <h2>Made to be played by everyone</h2>
     <p class="lead">Colour-blind palettes with letter cues on beams and targets, VoiceOver labels, Reduce Motion, adjustable haptics and full Dynamic Type. Zen mode has no timer. Arcade keeps the countdown.</p>
     <div class="cta" style="display:flex;gap:12px;flex-wrap:wrap">
-      <a class="btn" href="https://apps.apple.com/us/app/prismaray/id6781785309" rel="noopener">Get PrismaRay</a>
+      <a class="btn store" href="https://apps.apple.com/us/app/prismaray/id6781785309" rel="noopener">Get PrismaRay</a>
       <a class="btn ghost" href="support.html">Support &amp; FAQ</a>
     </div>
   </section>
@@ -112,5 +112,16 @@
     <a href="mailto:jmamblat@duck.com">jmamblat@duck.com</a>
   </div>
 </footer>
+<script>
+  // App Store button: play the pulse ring, then follow the link.
+  document.querySelectorAll('.btn.store').forEach(function (b) {
+    b.addEventListener('click', function (e) {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+      e.preventDefault();
+      b.classList.remove('pulse'); void b.offsetWidth; b.classList.add('pulse');
+      setTimeout(function () { window.location.href = b.href; }, 380);
+    });
+  });
+</script>
 </body>
 </html>

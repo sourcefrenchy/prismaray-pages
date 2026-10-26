@@ -150,3 +150,19 @@ body.has-bg-art { position: relative; overflow-x: hidden; }
 .bg-art .glyph { position: absolute; width: 42px; height: 42px; opacity: .12; }
 body.has-bg-art > :not(.bg-art) { position: relative; z-index: 1; }
 @media (max-width: 760px) { .bg-art svg { right: -30vw; top: 80px; width: 120vw; opacity: .12; } }
+
+/* App Store button: halo + sheen on hover, press + pulse ring on click */
+.btn.store { position: relative; isolation: isolate;
+  background: linear-gradient(115deg, transparent 38%, rgba(102,204,255,.55) 50%, transparent 62%) no-repeat -150% 0 / 250% 100%, var(--text);
+  transition: transform .15s cubic-bezier(.2,.8,.2,1), box-shadow .2s; }
+.btn.store::before { content: ""; position: absolute; inset: -3px; border-radius: inherit; background: var(--rainbow);
+  filter: blur(10px); opacity: 0; z-index: -1; transition: opacity .25s; }
+.btn.store:hover { background-color: #fff; animation: sheen .9s ease forwards; box-shadow: 0 10px 30px rgba(102,204,255,.22); }
+.btn.store:hover::before { opacity: .85; }
+.btn.store:active { transform: scale(.94); }
+.btn.store.pulse { animation: pop .42s cubic-bezier(.2,.8,.2,1); }
+.btn.store.pulse::before { opacity: 1; filter: blur(2px); animation: ring .42s ease-out forwards; }
+@keyframes sheen { to { background-position: 150% 0, 0 0; } }
+@keyframes pop { 0% { transform: scale(1); } 35% { transform: scale(.9); } 100% { transform: scale(1.04); } }
+@keyframes ring { 0% { inset: -3px; opacity: 1; } 100% { inset: -22px; opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .btn.store, .btn.store::before, .btn.store:hover { animation: none !important; transition: none; } }

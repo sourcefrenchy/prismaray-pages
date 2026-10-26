@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=8">
+<link rel="stylesheet" href="style.css?v=9">
 </head>
 <body>
 <header class="nav">
@@ -20,7 +20,7 @@
       <a href="index.html" class="hide-sm">Home</a>
       <a href="support.html" class="active">Support</a>
       <a href="privacy-policy.html" class="hide-sm">Privacy</a>
-      <a class="btn" href="https://apps.apple.com/us/app/prismaray/id6781785309" rel="noopener">App Store</a>
+      <a class="btn store" href="https://apps.apple.com/us/app/prismaray/id6781785309" rel="noopener">App Store</a>
     </nav>
   </div>
 </header>
@@ -135,5 +135,16 @@
     <a href="mailto:jmamblat@duck.com">jmamblat@duck.com</a>
   </div>
 </footer>
+<script>
+  // App Store button: play the pulse ring, then follow the link.
+  document.querySelectorAll('.btn.store').forEach(function (b) {
+    b.addEventListener('click', function (e) {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+      e.preventDefault();
+      b.classList.remove('pulse'); void b.offsetWidth; b.classList.add('pulse');
+      setTimeout(function () { window.location.href = b.href; }, 380);
+    });
+  });
+</script>
 </body>
 </html>
